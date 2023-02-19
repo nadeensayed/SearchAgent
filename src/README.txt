@@ -1,8 +1,8 @@
-•	General Idea of the problem:
+•** General Idea of the problem:**
 
 Our problem mainly consists of a 2d grid of cells. A cell can either contain a ship or a station or it can be empty. Each ship contains a number of passengers and once all passengers are either dead or picked up by our agent, the ship becomes a wreck and the black box becomes retrievable and the agent can now retrieve it. The agent is supposed to use different search algorithms to navigate through the grid picking up people and dropping them at a station and retrieving black boxes. The agent should save as many people as possible and retrieve as many black boxes as possible.
 
-•	Our Hierarchy :
+•** Our Hierarchy:**
 
 In our implementation we created a class for the state that keeps track of the details of the state our agent is in including: its position in the grid, the path cost to reach this state, passengers carried, passengers left to pick up, passengers saved, black boxes left to retrieve and black boxes taken. We also save the state of our grid at that time instance inside our state class.
 For the search tree node we created a class that consists of the state, the depth of the node, the parent node, and the action our agent took from the parent node to reach this state. This class contains a method called getPathFromRoot that returns a list of all ancestor nodes of this node. We also created a method calles plan that uses the getPathFromRoot method to formulate the path string of this node.
